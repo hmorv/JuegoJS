@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Juego Aventura</title>
+	<script type="text/javascript" src="JavaScript/personajes.js"></script>
+	<script type="text/javascript">
+		var clase = prompt("Elige tu clase para empezar la aventura (Mago | Barbaro | Nigromante)");
+
+		var pj = new Personaje(clase);
+
+		document.write("Bienvenido, tu elección ha sido: " + pj.Clase + ". Sus caracteristicas son: <br /> Vida: " + pj.Hp + "<br/> Arma: " + pj.Arma + "<br/> Nivel: " + pj.Lvl + "<br/> Exp: " + pj.Exp + "<br/>");
+
+		document.write("Las habilidades de tu personaje son: <br/>");
+
+		MostrarSpells(pj);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
