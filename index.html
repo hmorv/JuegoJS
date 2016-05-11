@@ -5,7 +5,17 @@
 	<title>Juego Aventura</title>
 	<script type="text/javascript" src="JavaScript/personajes.js"></script>
 	<script type="text/javascript">
-		var clase = prompt("Elige tu clase para empezar la aventura (Mago | Barbaro | Nigromante)");
+	
+		do {
+			var clase = prompt("Elige tu clase para empezar la aventura (Mago | Barbaro | Nigromante)");
+
+			if (clase != "Mago" && clase != "Barbaro" && clase != "Nigromante") {
+				var check = false;
+			} else {
+				var check = true;
+			}
+			
+		} while (!check)
 
 		var pj = new Personaje(clase);
 

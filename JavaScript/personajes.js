@@ -36,11 +36,11 @@ function Personaje(tipo) {
 		} else {
 			if (this.Spells instanceof Array) {
 				var spell = prompt("Elige el Spell que utilizaras: " + this.Spells[0] + " , " + this.Spells[1] + " , " + this.Spells[2]);
-				var daño = Math.floor((Math.random() * 100) + 1);
+				var daño = Math.floor((Math.random() * 200) + 1);
 				document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>"); 
 			} else {
 				var spell = prompt("Elige el Spell que utilizaras " + this.Spells);
-				var daño = Math.floor((Math.random() * 100) + 1);
+				var daño = Math.floor((Math.random() * 200) + 1);
 				document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>"); 
 			}
 			
