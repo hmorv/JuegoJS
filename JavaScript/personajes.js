@@ -36,28 +36,28 @@ function Personaje(tipo) {
 		} else {
 			if (this.Spells instanceof Array) {
 				do {
-					let spell = prompt("Elige el Spell que utilizaras: " + this.Spells[0] + " , " + this.Spells[1] + " , " + this.Spells[2]);
+					var spell = prompt("Elige el Spell que utilizaras: " + this.Spells[0] + " , " + this.Spells[1] + " , " + this.Spells[2]);
 
 					if (spell == this.Spells[0]) {
 						let daño = Math.floor((Math.random() * 200) + 1);
 						document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>");
-						let check = true;
+						var check = true;
 					} else if (spell == this.Spells[1]) {
 						let daño = Math.floor((Math.random() * 200) + 1);
 						document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>");
-						let check = true;
+						var check = true;
 					} else if (spell == this.Spells[2]) {
 						let daño = Math.floor((Math.random() * 200) + 1);
 						document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>");
-						let check = true;
+						var check = true;
 					} else {
 						alert("No posees el Spell elegido");
-						let check = false;
+						var check = false;
 					}
 				} while (!check) 
 			} else {
 				do {
-					let spell = prompt("Elige el Spell que utilizaras " + this.Spells);
+					var spell = prompt("Elige el Spell que utilizaras " + this.Spells);
 
 					if (spell == this.Spells) {
 						let daño = Math.floor((Math.random() * 200) + 1);
@@ -65,11 +65,10 @@ function Personaje(tipo) {
 						var check = true;
 					} else {
 						alert("No posees el Spell elegido");
-						let check = false;
+						var check = false;
 					}
 				} while (!check)
-			}
-			
+			}	
 		}
 	}
 } 
