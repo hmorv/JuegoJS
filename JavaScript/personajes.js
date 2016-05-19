@@ -33,6 +33,7 @@ function Personaje(tipo) {
 		if (op == "Arma") {
 			var daño = Math.floor((Math.random() * 100) + 1);
 			document.write("Atacas con tu " + this.Arma + " y haces " + daño + " ptos de daño!!<br/>");
+			return daño;
 		} else {
 			if (this.Spells instanceof Array) {
 				do {
@@ -42,14 +43,17 @@ function Personaje(tipo) {
 						let daño = Math.floor((Math.random() * 200) + 1);
 						document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>");
 						var check = true;
+						return daño;
 					} else if (spell == this.Spells[1]) {
 						let daño = Math.floor((Math.random() * 200) + 1);
 						document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>");
 						var check = true;
+						return daño;
 					} else if (spell == this.Spells[2]) {
 						let daño = Math.floor((Math.random() * 200) + 1);
 						document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>");
 						var check = true;
+						return daño;
 					} else {
 						alert("No posees el Spell elegido");
 						var check = false;
@@ -63,6 +67,7 @@ function Personaje(tipo) {
 						let daño = Math.floor((Math.random() * 200) + 1);
 						document.write("Atacas con tu Spell: " + spell + " y haces " + daño + " ptos de daño!!<br/>"); 
 						var check = true;
+						return daño;
 					} else {
 						alert("No posees el Spell elegido");
 						var check = false;
@@ -74,6 +79,7 @@ function Personaje(tipo) {
 } 
 
 function MostrarSpells(persj) {
+	document.write("Las habilidades de tu personaje son: <br/>");
 	if (persj.Spells instanceof Array) {
 		for (var i in persj.Spells) {
 			document.write(persj.Spells[i] + "<br/>");	

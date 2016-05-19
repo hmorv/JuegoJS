@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Juego Aventura</title>
 	<script type="text/javascript" src="JavaScript/personajes.js"></script>
+	<script type="text/javascript" src="JavaScript/enemigos.js"></script>
 	<script type="text/javascript">
 	
 		do {
@@ -14,18 +15,22 @@
 			} else {
 				var check = true;
 			}
-			
 		} while (!check)
 
 		var pj = new Personaje(clase);
 
 		document.write("Bienvenido, tu elección ha sido: " + pj.Clase + ". Sus caracteristicas son: <br /> Vida: " + pj.Hp + "<br/> Arma: " + pj.Arma + "<br/> Nivel: " + pj.Lvl + "<br/> Exp: " + pj.Exp + "<br/>");
 
-		document.write("Las habilidades de tu personaje son: <br/>");
-
 		MostrarSpells(pj);
 
-		pj.Atacar();
+		document.write("-------------------------------------------------<br/>");
+
+		var enemigo = new Goblin();
+		document.write("Aparece un " + enemigo.Nombre + " !<br/>");
+
+		var atck = enemigo.Atacar();
+		pj.Hp -= atck;
+		document.write("Te quedan " + pj.Hp + " ptos de vida!<br/>");
 	</script>
 </head>
 <body>
