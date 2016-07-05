@@ -31,7 +31,7 @@ function batalla(pj,enemigo) {
 
 			alert("Tus Hp : " + pj.Hp + "\n Enemigo Hp : " + enemigo.Hp);			
 		}
-	} while (pj.Hp > 0 || enemigo.Hp > 0);	
+	} while (pj.Hp > 0 && enemigo.Hp > 0);	
 
 	if (enemigo.Hp <= 0) {
 		var exp = Math.floor((Math.random() * 100) + 1);
