@@ -5,6 +5,7 @@
 	<title>Juego Aventura</title>
 	<script type="text/javascript" src="JavaScript/personajes.js"></script>
 	<script type="text/javascript" src="JavaScript/enemigos.js"></script>
+	<script type="text/javascript" src="JavaScript/funciones.js"></script>
 	<script type="text/javascript">
 
 		var clases = ["Mago", "Barbaro", "Nigromante"];
@@ -24,9 +25,11 @@
 		var enemigo = new Goblin();
 		document.write("Aparece un " + enemigo.Nombre + " !<br/>");
 
-		var atck = enemigo.Atacar();
-		pj.Hp -= atck;
-		document.write("Te quedan " + pj.Hp + " ptos de vida!<br/>");
+		// var atck = enemigo.Atacar();
+		// pj.Hp -= atck;
+		// document.write("Te quedan " + pj.Hp + " ptos de vida!<br/>");
+
+		batalla(pj,enemigo);
 	</script>
 </head>
 <body>

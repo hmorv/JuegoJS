@@ -61,7 +61,7 @@ function Personaje(tipo) {
 				} while (!check) 
 			} else {
 				do {
-					var spell = prompt("Elige el Spell que utilizaras " + this.Spells);
+					var spell = prompt("Elige el Spell que utilizaras: " + this.Spells);
 
 					if (spell == this.Spells) {
 						let daño = Math.floor((Math.random() * 200) + 1);
